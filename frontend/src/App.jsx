@@ -3,6 +3,8 @@ import { AuthProvider } from "./context/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
+import ReportsPage from "./pages/ReportsPage";
+import AdminDashboard from "./pages/AdminDashboard";
 
 export default function App() {
     return (
@@ -16,9 +18,7 @@ export default function App() {
                         path="/reports"
                         element={
                             <ProtectedRoute requiredRole="ROLE_STANAR">
-                                <div style={{ padding: 40 }}>
-                                    <h2>Stranica stanara (uskoro)</h2>
-                                </div>
+                                <ReportsPage />
                             </ProtectedRoute>
                         }
                     />
@@ -26,9 +26,7 @@ export default function App() {
                         path="/admin"
                         element={
                             <ProtectedRoute requiredRole="ROLE_ADMIN">
-                                <div style={{ padding: 40 }}>
-                                    <h2>Admin dashboard (uskoro)</h2>
-                                </div>
+                                <AdminDashboard />
                             </ProtectedRoute>
                         }
                     />

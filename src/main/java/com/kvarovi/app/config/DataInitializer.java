@@ -51,12 +51,12 @@ public class DataInitializer implements CommandLineRunner {
 
         Building zgradaA = new Building();
         zgradaA.setName("Zgrada A");
-        zgradaA.setAddress("Bulevar oslobodjenja 15");
+        zgradaA.setAddress("Bulevar Nemanjica 70a");
         buildingRepository.save(zgradaA);
 
         Building zgradaB = new Building();
         zgradaB.setName("Zgrada B");
-        zgradaB.setAddress("Cara Dusana 42");
+        zgradaB.setAddress("Bulevar Nemanjica 68");
         buildingRepository.save(zgradaB);
 
         List<String> kategorije = List.of("Vodovod", "Struja", "Lift", "Zajednicke prostorije", "Grejanje");
